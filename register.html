@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function CheckLength(name){
+            var password = document.getElementById(name).value;
+
+            if (password.length < 8) {
+                alert("password minimal 8 karakter")
+            }
+        }
+    </script>
+    <title>Register</title>
+</head>
+<body>
+    <section class="section">
+        <div class="box">
+            <div class="menu">
+                <ul>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="#" id="active">register</a></li>
+                </ul>
+            </div>
+            <div class="form-input">
+                <form method="post">
+                    <div class="txt_field">
+                        <input type="text" required>
+                        <span></span>
+                        <label>Username</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" required>
+                        <span></span>
+                        <label>email</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" id="password"required>
+                        <span></span>
+                        <label>password</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" required>
+                        <span></span>
+                        <label>password confirm</label>
+                    </div>
+                    <input class="register" type="submit" value="register"  style="margin-top: 10px;" onclick="CheckLength('password')">
+                </form>
+            </div>
+        </div>
+    </section>
+   
+</body>
+</html>
